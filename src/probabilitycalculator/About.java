@@ -11,10 +11,11 @@ public class About extends JFrame {
     public About() {
        
         setTitle("About Our Project");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         setSize(1366, 565);
         setLayout(new BorderLayout());
         getContentPane().setBackground(new Color(240, 248, 255)); 
+        setLocationRelativeTo(null);
 
        //ABOUT TITLE
         JLabel headerLabel = new JLabel("ABOUT", JLabel.CENTER);

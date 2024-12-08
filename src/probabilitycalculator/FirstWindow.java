@@ -90,12 +90,12 @@ public class FirstWindow extends JFrame {
                 case "START":
                     // When "START" is clicked, open ChooseMenu
                     new ChooseMenu().setVisible(true);
-                    dispose();  // Close FirstWindow after opening ChooseMenu
+                    dispose();  
                     break;
                 case "ABOUT":
                     // When "ABOUT" is clicked, open About window
                     new About().setVisible(true);
-                    dispose();  // Close FirstWindow after opening About
+                   
                     break;
             }
         }
