@@ -1,0 +1,98 @@
+This Probability Calculator System is a compilation of lessons in probability from discrete mathematics, focusing mainly on calculating the chances/probability of rolling a die, tossing a coin, and drawing a card from a deck. It calculates the probability of different events, providing an easy way to explore and understand probability using simple examples.
+
+Probability is the study of how likely an event is to happen. It helps us understand random processes and their results. The rules of probability are used in many areas like genetics, weather forecasting, opinion polls, and the stock market.
+A random experiment is an activity where we know all possible outcomes, but we can't predict the exact result. 
+The sample space is the set of all possible outcomes of an experiment. F
+An event is any specific outcome or combination of outcomes from the sample space.
+
+DICE PROBABILITY CALCULATOR
+This part of the system calculates the probability of different outcomes when rolling up to 3 dice. You can choose to roll the dice in any order or in a specific exact order. The probability calculation is based on all possible outcomes, considering each die roll.
+The code works by first checking the values of the selected dice. If a die is not selected, it is ignored. Then, it counts how many times each die value appears. 
+If all the dice have different values, it calculates the total number of unique arrangements (permutations). The formula used is based on factorials, which help find the total number of possible arrangements. If there are repeated dice values, the code divides the total by the factorial of the frequency of each repeated value to avoid overcounting.
+Key Concepts:
+Sample Space: For two dice, there are 36 possible outcomes because each die has 6 faces, so the total possibilities are 6 * 6 = 36.
+Event: An event could be getting a sum of 5 with two dice. This would include the pairs (1,4), (2,3), (3,2), and (4,1).
+Probability Calculation: The probability of an event happening is the number of favorable outcomes divided by the total number of possible outcomes. If you want the probability of getting a sum of 5 (event E), the calculation is: 
+P(E)=4/36=1/9 
+ because there are 4 outcomes that sum to 5, and 36 total possible outcomes.
+
+TOSS A COIN PROBABILITY CALCULATOR
+This part of the system calculates the probability of getting heads or tails when tossing a coin multiple times. When a coin is tossed, there are only two possible outcomes: heads (H) or tails (T).
+Input:
+
+
+The user enters the number of flips, the number of heads, and the number of tails. The system checks if the total number of heads and tails matches the number of flips. If not, it shows an error message.
+Binomial Probability Calculation:
+
+
+The system uses binomial probability to calculate the likelihood of getting a specific number of heads (or tails) in a set number of flips. The formula for binomial probability is: P(k)=(n k) × p^(k) × (1−p) ^(n−k) where:
+n is the total number of flips,
+k is the number of heads (or tails),
+p is the probability of getting heads (which is 0.5 for a fair coin).
+Probability of getting at least 1 head in 3 flips
+Using the same method:
+P(at least 1 head)=1−P(no heads) 
+The probability of no heads in 3 flips is calculated as P(0)P(0)P(0):
+P(0)=(30)⋅0.50⋅0.53 
+        =1⋅1⋅0.125=0.125
+Therefore:
+P(at least 1 head)=1−0.125=0.875
+The probability of getting at least one head in 3 flips is 7/8 or 87.5%.
+Result:
+After calculating the probability, the result is displayed both as a decimal (e.g., 0.50000) and as a percentage (e.g., 50%).
+
+Card Probability Calculator
+This system calculates events for  drawing cards from a deck of 52 cards. It can occur with or without replacement. The code provides functions to compute probabilities for specific outcomes, such as drawing an Ace, a Diamond, or combinations of events, considering whether the cards are replaced after each draw.
+Key Concepts:
+Total Outcomes:
+There are 52 cards in a standard deck, so the total number of possible outcomes is 52.
+Events:
+Event A: Drawing an Ace (4 possible aces in a deck).
+Event B: Drawing a Diamond (13 diamonds in a deck).
+
+In our code, we implemented different probability functions to handle scenarios, like calculating the probability of either one event happening, both events happening, or neither happening, among others.
+1. Probability that at least one event occurs (Union of Events)
+In the atLeastOneOccurs function, we calculate the probability that at least one of the two events (A or B) occurs. The formula used is:
+P(A∪B)=P(A)+P(B)−P(A∩B)
+This calculates the total probability by considering the number of elements in each event and their intersection.
+
+2. Probability that both events occur (Intersection of Events)
+In the bothOccur function, we calculate the probability that both events A and Boccur. The formula is:
+P(A∩B)=Number of common outcomes/ 52
+
+3. Probability that exactly one event occurs
+The exactlyOneOccurs function calculates the probability that exactly one of the two events (A or B) occurs. 
+P(Exactly one occurs)=P(A∪B)−P(A∩B)
+We use the union formula from earlier and subtract the intersection. This gives us the probability of either event occurring, but not both.
+
+4. Probability that neither event occurs
+In the neitherOccurs function, we calculate the probability that neither event occurs.
+P(Neither occurs)=1−P(A∪B)
+This is simply the complement of the union of the two events. So, we subtract the union probability from 1.
+
+5. Probability that event A does not occur
+The notOccur function calculates the probability that event A does not occur. The formula used is:
+P(Not A)=1−P(A)
+We simply calculate the complement of event A’s occurrence.
+
+
+6. Probability that event B does not occur
+The notOccurB function works the same as the previous one but for event B. It uses:
+P(Not B)=1−P(B)
+
+7. Conditional Probability
+The aGivenB function calculates the conditional probability that event Ahappens given that event B has already happened. The formula is:
+P(A∣B)=P(A∩B) / P(B)
+
+
+Helper Function: Intersection
+The intersection helper function is used to find the common elements between two sets (events). This function modifies eventA to only keep the elements that are present in both A and B.
+
+Links : https://www.tutorialspoint.com/discrete_mathematics/discrete_mathematics_probability.htm
+
+Members (BSIT 2105): 
+Paris,Mica Danah P.
+Creencia, Eloisa Joyce
+Cagula, Kaye Cee 
+Buenaobra, Alyssa 
+Valiente, Theresa
